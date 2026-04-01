@@ -31,7 +31,7 @@ Biarkan harummu menemani setiap aktivitas di bulan ini 🌿💫
 *Syaratnya gampang:*
 * 💰 Minimal belanja Rp 50.000 (Bisa ajak teman biar makin hemat!)
 * ✨ Follow IG & TikTok: @myperfumee__
-* 🎵Tunjukkan postingan ini ke kasir.
+* 🎵 Tunjukkan postingan ini ke kasir.
 
 📅 *Periode:* 1 – 30 April 2026
 
