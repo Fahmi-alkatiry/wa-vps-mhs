@@ -29,7 +29,7 @@ Khusus bulan April, ada *DISKON 20%* buat kamu yang pengen tampil wangi seharian
 Biarkan harummu menemani setiap aktivitas di bulan ini 🌿💫
 
 *Syaratnya gampang:*
-* 💰  Minimal belanja Rp 50.000 (Bisa ajak teman biar makin hemat!)
+* 💰 Minimal belanja Rp 50.000 (Bisa ajak teman biar makin hemat!)
 * ✨ Follow IG & TikTok: @myperfumee__
 * 🎵Tunjukkan postingan ini ke kasir.
 
