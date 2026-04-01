@@ -1,0 +1,29 @@
+{
+  "name": "vps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon broadcast.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fahmi-alkatiry/wa-vps-mhs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Fahmi-alkatiry/wa-vps-mhs/issues"
+  },
+  "homepage": "https://github.com/Fahmi-alkatiry/wa-vps-mhs#readme",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "dotenv": "^17.3.1",
+    "mysql2": "^3.20.0",
+    "node-cron": "^4.2.1"
+  }
+}
