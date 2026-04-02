@@ -111,15 +111,17 @@ async function runBroadcast(limit) {
   try {
     conn = await pool.getConnection();
 
-    // Ambil data status 0
-    // SELECT id, hp FROM unira WHERE status = 0 AND nik LIKE "352801%";
-    const [rows] = await conn.execute(
+    // Pastikan limit adalah angka murni (Integer)
+    const limitNumber = Number(limit);
+
+    // GUNAKAN .query alih-alih .execute untuk menghindari masalah LIMIT pada prepared statement
+    const [rows] = await conn.query(
       'SELECT id, hp FROM unira WHERE status = 0 AND nik LIKE "352801%" LIMIT ?',
-      [limit],
+      [limitNumber],
     );
 
     if (rows.length === 0) {
-      console.log("Tidak ada antrean (Status 0).");
+      console.log("Tidak ada antrean (Status 0 dengan filter NIK).");
       return;
     }
 
@@ -130,17 +132,18 @@ async function runBroadcast(limit) {
       const success = await safeSend(row.hp, PROMO_MESSAGE);
       const finalStatus = success ? 1 : 2;
 
-      // Update database
+      // Update database (Untuk UPDATE tetap boleh pakai .execute)
       await conn.execute(
         "UPDATE unira SET status = ?, updatedAt = NOW() WHERE id = ?",
         [finalStatus, row.id],
       );
       console.log(`ID ${row.id} -> Status ${finalStatus}`);
 
-      // JEDA 5 MENIT (300.000 ms) - Jangan menunggu jika ini pesan terakhir di batch
+      // JEDA (Jangan menunggu jika ini pesan terakhir di batch)
       if (i < rows.length - 1) {
-        console.log(`Menunggu 5 menit sebelum pesan berikutnya...`);
-        await wait(600000);
+        // Kamu tadi setting 600000 (10 menit), kalau mau 5 menit ganti jadi 300000
+        console.log(`Menunggu jeda sebelum pesan berikutnya...`);
+        await wait(300000); 
       }
     }
   } catch (error) {
@@ -196,6 +199,6 @@ cron.schedule("0 17 * * *", () => sendProgressReport(), {
 });
 
 console.log("🚀 My Perfume Service Aktif (Jeda 5 Menit per pesan)...");
-// sendProgressReport()
+sendProgressReport()
 
 // safeSend(MY_NUMBER, PROMO_MESSAGE);
