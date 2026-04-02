@@ -116,7 +116,7 @@ async function runBroadcast(limit) {
 
     // GUNAKAN .query alih-alih .execute untuk menghindari masalah LIMIT pada prepared statement
     const [rows] = await conn.query(
-      'SELECT id, hp FROM unira WHERE status = 0 AND nik LIKE "352801%" ORDER BY createdAt DESC LIMIT ?',
+      'SELECT id, hp FROM unira WHERE status = 0 AND nik LIKE "352801%" ORDER BY id DESC LIMIT ?',
       [limitNumber],
     );
 
