@@ -18,7 +18,7 @@ const waUser = process.env.WA_BASIC_USER || "user1";
 const waPass = process.env.WA_BASIC_PASS || "pass1";
 const WA_DEVICE_ID = process.env.WA_DEVICE_ID || "myperfume";
 const MY_NUMBER = "089668125652";
-const pesan = 4;
+const pesan = 5;
 
 const PROMO_MESSAGE = `*✨ Cuma 1 Menit dari Kampus UNIRA! 🎓✨*
 
