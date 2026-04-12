@@ -116,7 +116,7 @@ async function runBroadcast(limit) {
 
     // GUNAKAN .query alih-alih .execute untuk menghindari masalah LIMIT pada prepared statement
     const [rows] = await conn.query(
-      'SELECT id, hp FROM unira WHERE status = 0 AND nik LIKE "352801%" ORDER BY id DESC LIMIT ?',
+      'SELECT id, hp FROM unira WHERE status = 0 AND id LIKE "2025%" ORDER BY id DESC LIMIT ?',
       [limitNumber],
     );
 
@@ -159,9 +159,9 @@ async function sendProgressReport() {
   try {
     conn = await pool.getConnection();
     const [rows] = await conn.execute(
-      'SELECT status, COUNT(*) as total FROM unira WHERE nik LIKE "352801%" GROUP BY status;',
+      'SELECT status, COUNT(*) as total FROM unira WHERE id LIKE "2025%" GROUP BY status;',
     );
-    // SELECT status, COUNT(*) as total FROM unira WHERE nik LIKE "352801%" GROUP BY status;
+    // SELECT status, COUNT(*) as total FROM unira WHERE id LIKE "2025%" GROUP BY status;
 
     let report = { 0: 0, 1: 0, 2: 0 };
     rows.forEach((r) => (report[r.status] = r.total));
@@ -199,7 +199,9 @@ cron.schedule("0 17 * * *", () => sendProgressReport(), {
 });
 
 console.log("🚀 My Perfume Service Aktif (Jeda 5 Menit per pesan)...");
-runBroadcast(pesan)
-sendProgressReport()
+// runBroadcast(pesan)
+// sendProgressReport()
+let a = sendProgressReport()
+console.log(a)
 
 // safeSend(MY_NUMBER, PROMO_MESSAGE);
