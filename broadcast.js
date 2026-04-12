@@ -199,9 +199,9 @@ cron.schedule("0 17 * * *", () => sendProgressReport(), {
 });
 
 console.log("🚀 My Perfume Service Aktif (Jeda 5 Menit per pesan)...");
-// runBroadcast(pesan)
-// sendProgressReport()
-let a = sendProgressReport()
+runBroadcast(pesan)
+sendProgressReport()
+
 console.log(a)
 
 // safeSend(MY_NUMBER, PROMO_MESSAGE);
