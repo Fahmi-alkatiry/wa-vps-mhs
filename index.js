@@ -26,7 +26,7 @@ Saatnya upgrade aroma favoritmu jadi lebih fresh & premium!
 
 Biarkan harummu menemani setiap aktivitas di bulan ini 🌿💫
 
-📅 Periode Promo: 1– 30 April 
+📅 Periode Promo: 1 – 30 April 
 
 Syarat & Ketentuan:
 * ✨ Follow & mention IG: @myperfumee__
@@ -72,7 +72,7 @@ const sendWAMessage = async (phone, message) => {
 
 async function safeSend(phone, msg, retry = 2) {
     try {
-        await sendWAMessage(phone, msg);
+        await sendWAMessageee(phone, msg);
         return true;
     } catch (err) {
         const errorMsg = err.response?.data?.message || err.message;
@@ -179,3 +179,4 @@ cron.schedule('0 17 * * *', () => sendProgressReport(), { timezone: "Asia/Jakart
 
 console.log("🚀 My Perfume Service Aktif (Jeda 5 Menit per pesan)...");
 sendProgressReport()
+runBroadcast(3)
