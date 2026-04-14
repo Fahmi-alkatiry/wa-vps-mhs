@@ -202,6 +202,4 @@ console.log("🚀 My Perfume Service Aktif (Jeda 5 Menit per pesan)...");
 runBroadcast(pesan)
 sendProgressReport()
 
-console.log(a)
-
 // safeSend(MY_NUMBER, PROMO_MESSAGE);
