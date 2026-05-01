@@ -18,13 +18,13 @@ const waUser = process.env.WA_BASIC_USER || "user1";
 const waPass = process.env.WA_BASIC_PASS || "pass1";
 const WA_DEVICE_ID = process.env.WA_DEVICE_ID || "myperfume";
 const MY_NUMBER = "089668125652";
-const pesan = 10;
+const pesan = 12;
 
 const PROMO_MESSAGE = `*✨ Cuma 1 Menit dari Kampus UNIRA! 🎓✨*
 
 Lagi pusing tugas atau baru kelar kelas? Segerin lagi mood kamu dengan aroma premium dari *My Perfume!*🌿💫
 
-Khusus bulan April, ada *DISKON 20%* buat kamu yang pengen tampil wangi seharian di kampus!
+Khusus bulan Mei, ada *DISKON 20%* buat kamu yang pengen tampil wangi seharian di kampus!
 
 Biarkan harummu menemani setiap aktivitas di bulan ini 🌿💫
 
@@ -33,7 +33,7 @@ Biarkan harummu menemani setiap aktivitas di bulan ini 🌿💫
 * ✨ Follow IG & TikTok: @myperfumee__
 * 🎵 Tunjukkan postingan ini ke kasir.
 
-📅 *Periode:* 1 – 30 April 2026
+📅 *Periode:* 1 – 31 Mei 2026
 
 Yuk langsung datang ke store kami! 
 📍 *Lokasi:* Jl. Panglegur (Selatan pertigaan lampu merah Terminal Ronggosukowati, timur jalan).
